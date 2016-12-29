@@ -37,4 +37,8 @@ You will be taken to a "Workspaces" screen that you will use every time you crea
 
 8) We will go over the important features in class and you should look at the [documentation](https://docs.c9.io/docs/) for c9.io to become familiar with all of the features.  
 
-If you have trouble with setting up the c9 system, you can look at the code for the first lab in this repository.
+9) During the account creation process, c9 should have sent you an email asking you to change your password.  Follow the link in the email to change your password, so you will be able to log in once the c9 tab is closed.
+
+![](https://mjcleme.github.io/SC9.png)
+
+10) If you have trouble with setting up the c9 system, you can look at the code for the first lab in this repository.

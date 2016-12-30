@@ -1,44 +1,76 @@
-# c9setup
-This tutorial will show you how to setup a c9.io workspace for your first lab in CS 235.  You will use the same process to setup the rest of the labs for the class.  We will be using a lot of in-class learning activities and will be using c9 for all of these.  You should set up an account and follow this tutorial even if you are planning to complete your labs using another development environment.
-1) Creating an account
-You should have received an email message telling you that you have been invited to c9.io .  If you did not receive an email message, send email to [Dr. Clement](mailto:clement@cs.byu.edu) to receive an invitation.
+RPG Lab #1
 
-![](https://mjcleme.github.io/SC1.png)
+# Purpose
 
-2) Open a tab in your web browser with the link in the email invitation to create the account.  You should select "Create new account" if you do not already have a c9.io account.
+Inheritance is a powerful and integral component of object-oriented programming. Hierarchies existing in the real world can be easily modeled using inheritance; this practice can greatly simplify code.
 
-![](https://mjcleme.github.io/SC2.png)
+This, and all 235 assignments will be verified by a TA-written test driver.
 
-3) Enter your name so the TAs can find you and so you can collaborate with other students on learning activities and select the "Next" button.
+# Key Reading
 
-![](https://mjcleme.github.io/SC3.png)
+CS 142 Text
 
-4) Now create a username.  You will use this to login and it will become the URL that you see when working on your projects.  Select the "Next" button.
+# Background
 
-![](https://mjcleme.github.io/SC4.png)
+A major part of modern computer use is video games, and it's all fun and games until someone has to program them. Even the most simple video games, like the ancient Pong, require a lot of code to work properly. Many of the most basic concepts in programming appear in simple text-based role playing games, or RPGs.
 
-5) Select "Student" and "Coursework" for your usage and select "Next".  On the next screen confirm your details and prove you are not a robot.  Then select "Create an Account".
+For old time's sake, a friend has hired you to help write just such a game for his new company. Your first assignment is to implement the fighters awaiting battle at an arena. With three kinds of fighters and many stats for each fighter, you will need all of your previous programming experience to do well and keep your new job.
 
-![](https://mjcleme.github.io/SC5.png)
+If terms like "hit points", "stats", or "damage" are unfamiliar within an RPG setting, please speak with a TA.
 
-6) Now select "Join Team" to become part of the CS235 class.
+# Requirements
 
-You will be taken to a "Workspaces" screen that you will use every time you create a new workspace.
+## Overview
 
-![](https://mjcleme.github.io/SC6.png)
+You will need the files in this c9.io workspace to complete this lab:
 
-6) Notice the "CS 235" link under "Your Team Subscriptions".  Now you can create a workspace for the first lab.  Select the "+" for "Create a New Workspace".  Give your workspace the name "lab1" and select "clone workspace".  Then type in "mjcleme" into the "Clone Workspace" box and it will show you all of the workspace templates for the instructor.  Select mjcleme/lab1.
+## Part 1 - Construct the Arena (3 points)
 
-![](https://mjcleme.github.io/SC7.png)
+* Make a class Arena that inherits from the ArenaInterface provided; the arena is simply a collection of fighters, each with a unique name.  You should fill in each of the virtual methods included in the ArenaInterface class.
+* For Part 1 only, you may assume all strings passed to the arena's adding method will be of the correct format
+* For Part 1 only, you may assume all strings passed to the arena's getting and removing methods will be names already existing in the arena
 
-7) The system will take a few minutes to clone the workspace and to set up a virtual computer for you.  This will act just like a real linux computer and will give you access to an Integrated Development Environment (IDE) and a Command Line interface for the computer.
+## Part 2 - Let the Battle Begin (3 points)
 
-![](https://mjcleme.github.io/SC8.png)
+* Make a class that inherits from the FighterInterface provided; details about abilities, stats, and more can be found in the FighterInterface
+* For Part 2, the test driver will not call your useAbility() or regenerate() methods, so it is possible to receive credit for Part 2 without these methods being complete
+* Completion of Part 1 is required to submit Part 2
 
-8) We will go over the important features in class and you should look at the [documentation](https://docs.c9.io/docs/) for c9.io to become familiar with all of the features.  
+## Part 3 - Fortify the Walls (2 points)
 
-9) During the account creation process, c9 should have sent you an email asking you to change your password.  Follow the link in the email to change your password, so you will be able to log in once the c9 tab is closed.
+* Make adding new fighters to your arena robust; this involves rejecting any string that is not of the correct format or that would add a duplicate name to the arena
+* Make getting and removing existing fighters in your arena robust
+* Completion of Part 1 is required to submit Part 3
 
-![](https://mjcleme.github.io/SC9.png)
+## Part 4 - Let Me Show You My True Form... (6 points, 2 points per fighter type)
 
-10) If you have trouble with setting up the c9 system, you can look at the code for the first lab in this repository.
+* Add functionality to the useAbility() method and the regenerate() method for each fighter type
+* Completion of Parts 1 and 2 is required to submit Part 4
+
+## UML design document. (1 point)
+
+* Refer to page 113 in the book for an example.
+* Please bring when asking TAs questions.
+* You must bring a HARD COPY to the TAs when you pass off. (There is a printer upstairs if you made a digital copy)
+
+# Requirement Notes
+
+## General
+
+* You are required to write a seperate '.cpp' and '.h' for each class you implement.
+* You are required to use inheritance to implement the three kinds of fighters. * The TAs reserve the right to deny pass off to programs utilizing inheritance incorrectly or that do not have the expected inheritance hierarchy.
+Unless otherwise instructed, use standard integer division for all division operations specified. This means all fractional results should be rounded down (ex: 17/10 = 1).
+* You should not call a Fighter's useAbility() function in the getDamage() function, the test driver will handle all function calls for the Fighters.
+It is highly recommended to use the standard vector as the underlying representation for the Arena class. You are welcome to use other underlying structures, but those will be covered later in the course.
+
+## Fighter String Format
+
+* Fighters are represented as strings when added to the arena. The following format is expected:
+** (name) (type) (maximum hit points) (strength) (speed) (magic)
+** Example: Xephos A 200 13 21 10
+
+* The name is a single word; the type is a single capital letter ((R)obot, (A)rcher, or (C)leric); the remaining four stats are positive integers.
+Fighting
+
+
+

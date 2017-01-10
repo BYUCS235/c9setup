@@ -41,4 +41,6 @@ You will be taken to a "Workspaces" screen that you will use every time you crea
 
 ![](https://mjcleme.github.io/SC9.png)
 
-10) If you have trouble with setting up the c9 system, you can look at the code for the first lab in this repository.
+10) Now make the workspace private.  Go back to your dashboard, select the workspace you just created (dont open it) and click the "private" button.
+
+11) If you have trouble with setting up the c9 system, you can look at the code for the first lab in this repository.
